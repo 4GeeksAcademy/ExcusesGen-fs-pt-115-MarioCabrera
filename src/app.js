@@ -7,35 +7,14 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-  let action = ['ate', 'peed', 'crushed', 'broke'];
-  let what = ['my homework', 'my phone', 'the car'];
-  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+  let who = ['The dog', 'My grandma', 'The mailman', 'My bird','my mom','my friend'];
+  let action = ['ate', 'peed', 'crushed', 'broke','ruined','lost'];
+  let what = ['my homework', 'my phone', 'the car','my computer','my keys'];
+  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying','while i was petting my cat','while i was cleaning'];
   let excuse = [];
-  for (let i = 0; i < 4; i++) {
-    switch (i) {
-      case 0:
-        excuse[i] = who[Math.floor(Math.random()*4)]
-        console.log(excuse);
-        
-        break;
-      case 1:
-        excuse[i] = action[Math.floor(Math.random()*4)]
-        console.log(excuse);
-        break;
-      case 2:
-        excuse[i] = what[Math.floor(Math.random()*3)]
-        console.log(excuse);
-        break;
-      case 3:
-        excuse[i] = when[Math.floor(Math.random()*4)]
-        console.log(excuse);
-        break;
-    
-      default:
-        break;
-    }
-    
-  }
+  excuse[0] = who[Math.floor(Math.random()*who.length)]
+  excuse[1] = action[Math.floor(Math.random()*action.length)]
+  excuse[2] = what[Math.floor(Math.random()*what.length)]
+  excuse[3] = when[Math.floor(Math.random()*when.length)]
   document.getElementById("Excuses").innerHTML = excuse.join(` `);
 };
